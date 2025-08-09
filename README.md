@@ -18,7 +18,7 @@ Examples of these include RAS applications, shared resource access control, work
 Dependencies:
 - OpenMPI
 
-The following recipes may be used to compile and run the framework alone:
+The following recipes—found in the included makefile—may be used to compile and run the framework alone:
 <pre>
 recipe one
 recipe two
@@ -70,4 +70,5 @@ We would ask that you contact us if you encounter any bugs so that we can confir
 <br><br>
 
 ### Contact
+Anthony Sicoie - anthony.sicoie@queensu.ca
 Zackary Savoie - 19zs51@queensu.com
