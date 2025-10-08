@@ -38,6 +38,7 @@ The following explanation of command-line options can also be displayed with ```
 | -h / --help | Flag | Show help message. | N/A | N/A | No |
 | -b / --benchmark | \<int> | Number of "items" (long-type values) each BlueField should send per exchange. This option should be used for benchmarking data exchange speeds (meaningless information is exchanged). If it is omitted, the benchmark will exchange *actual* information retrieved from hosts. | N/A | >1 | No |
 | -l / --logfile | \<String> | An optional string to include in the local (BlueField statistics) log files. If omitted, the parameters which define the architecture and other command-line options will make up the logfile. Note that if a duplicate logfile would be created, an incrementing number will be appended to the end to avoid collisions. | N/A | N/A | No |
+| -i / --infinite | Flag | Specify this flag to force framework to run endlessly; this is useful for testing impact/load on x86 hosts. | N/A | N/A | No |
 
 *<b>\*</b>At least one of these must be specified.*
 *<b>**</b>If an invalid depth is supplied (it is not possible to create neighbourhoods of maximum size to that depth, e.g. -n 2, --np 16, -d 8), the depth will be corrected such that an allgather occurs between the members of the last neighbourhood.*
@@ -71,4 +72,5 @@ We would ask that you contact us if you encounter any bugs so that we can confir
 
 ### Contact
 Anthony Sicoie - anthony.sicoie@queensu.ca
+
 Zackary Savoie - 19zs51@queensu.com
