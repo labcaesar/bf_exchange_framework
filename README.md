@@ -40,8 +40,8 @@ The following explanation of command-line options can also be displayed with `-h
 | Option | Type | Description | Default | Valid Range | Required? |
 |------|------|------|------|------|------|
 | -e / --exchanges | \<int> | Number of exchange rounds to conduct between BlueFields. | 4 | >1 | No |
-| -n / --neighbourhood-size | \<int> | Maximum neighborhood size. If n > number of processes, allgather will occur at a depth of 1 regardless of what d is, if n == number of processes, a single neighbourhood will be used with no all gather. | 2 | >1 | No<b>_</b> |
-| -d / --depth | \<int> | The depth at which allgather will occur. Setting this alone controls the neighbourhood size, defaulting to a value that accommodates n = 2 if the depth is too big. NOTE: If both n and d are set, neighbourhood size of n will be used if possible, if neighbourhoods of n cause the depth value to change, depth will be reduced to enable all gather on the final layer. | N/A | >1<b>\*\*</b> | No<b>_</b> |
+| -n / --neighbourhood-size | \<int> | Maximum neighborhood size. If n > number of processes, allgather will occur at a depth of 1 regardless of what d is, if n == number of processes, a single neighbourhood will be used with no all gather. | 2 | >1 | No<b>\*</b> |
+| -d / --depth | \<int> | The depth at which allgather will occur. Setting this alone controls the neighbourhood size, defaulting to a value that accommodates n = 2 if the depth is too big. NOTE: If both n and d are set, neighbourhood size of n will be used if possible, if neighbourhoods of n cause the depth value to change, depth will be reduced to enable all gather on the final layer. | N/A | >1<b>\*\*</b> | No<b>\*</b> |
 | -v / --verbose | \<int> | Print debugging messages, varying in granularity. | 0 | 0-10 | No |
 | -h / --help | Flag | Show help message. | N/A | N/A | No |
 | -b / --benchmark | \<int> | Number of "items" (long-type values) each BlueField should send per exchange. This option should be used for benchmarking data exchange speeds (meaningless information is exchanged). If it is omitted, the benchmark will exchange _actual_ information retrieved from hosts. | N/A | >1 | No |
